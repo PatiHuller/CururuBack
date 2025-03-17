@@ -1,8 +1,13 @@
 const express = require('express');
 const api = express.Router();
 const upload = require('../libs/storage'); 
-console.log("Tentando importar o authenticateToken");
-const authenticateToken = require('../middlewares/authenticateToken');
+let authenticateToken;
+try {
+  authenticateToken = require('../middlewares/authenticateToken');
+} catch (error) {
+  console.error("Não foi possível importar o authenticateToken:", error);
+}
+// const authenticateToken = require('../middlewares/authenticateToken');
 
 
 const { 
