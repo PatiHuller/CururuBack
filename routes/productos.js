@@ -1,7 +1,7 @@
 const express = require('express');
 const api = express.Router();
 const upload = require('../libs/storage'); 
-const authenticateToken = require('../middlewares/authenticateToken.js');
+const authenticateToken = require('../middlewares/authenticateToken');
 
 
 const { 
